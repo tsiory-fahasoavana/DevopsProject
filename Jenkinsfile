@@ -4,11 +4,7 @@ pipeline {
     stages {
 
       stage('Test') {
-            agent {
-                docker {
-                    image 'python:3.11'
-                }
-            }
+            agent any
             steps {
                 sh 'python --version'
             }
